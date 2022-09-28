@@ -1,12 +1,11 @@
 
-
+import Image from 'next/image'
+import logo from '../../static/img/toribio-ecommerce.png' 
 export default () => {
 
     return(
-        <div style={{height : "100px", width : "100vw"}}>
-            <h1>
-                landing nav
-            </h1>
+        <div className='nav-container'>
+           <Image width={250} height={100} src={logo} alt="Toribio's Ecom"/>
         </div>
     )
 }

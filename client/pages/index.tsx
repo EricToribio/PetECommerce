@@ -7,7 +7,7 @@ export default () => {
   return(
     <div  className="landing-container">
       <div className="nav-wrapper">
-      <LandingNav/>
+      <LandingNav page="landing"/>
       </div>
       <div  className="landing-body">
       <Landing />

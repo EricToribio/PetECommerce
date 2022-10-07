@@ -32,20 +32,33 @@ export default (props : {page : string}) => {
            <div className={`${isNavCollapsed ? 'collapse ' : ''} navbar-collapse `} id="navbars">
         <div className={`${isNavCollapsed ? 'navbar-collapse' : 'nav-dropdown '}  `}
         onMouseLeave={isNavCollapsed ? handleNull : handleNavCollapse}>
+        {
+            props.page != "main" &&
+            <a className="nav-link " href="/" >Home</a>
+        }
+        {
+            props.page != "dogs" &&
+            <a className="nav-link " href="/dog" >Dogs</a>
+        }
         
-            <a className="nav-link " href="/food" >Food</a>
-        
-         
-            <a href="/toys" className=" nav-link" >Toys</a>
-         
-            <a href="/containment" className=" nav-link " >Crates & Carriers</a>
-         
-            <a className=" nav-link " href='/furniture' >Beds & Furniture</a>
-        
+         {
+            props.page != "cats" &&    
+             <a href="/cat" className=" nav-link" >Cats</a>
+        }
+        {
+            props.page != "cleaning" &&
             <a href="/cleaning" className=" nav-link" >Cleaning Supplies</a>
+        }
+         {
+            props.page != "deals" &&
+            <a href="/deals" className=" nav-link " >Deals</a>
+         }
+         {
+            props.page != "featured" &&
+            <a className=" nav-link " href='/feature' >Featured</a>
+         }
+        
           
-          
-            <a className="nav-link " href="/collars" > Collars , Harnesses & Leashes</a>
           
         </div>
       </div>

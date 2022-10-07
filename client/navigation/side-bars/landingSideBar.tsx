@@ -1,12 +1,10 @@
+import React, { PropsWithChildren } from 'react'
 
-
-export default () =>{
-
+export let landingSideBar : React.FC<PropsWithChildren<ReactNode>> = (props) => {
+    const {children} = props
     return(
-        <div className="bg-secondary  " style={{width : "200px"}}>
-            <h1 className="position-fixed">
-                Side Nav
-            </h1>
+        <div className="side-bar-container">
+            
         </div>
-    )
+  )
 }

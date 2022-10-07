@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import '../styles/nav-bar.scss'
 import '../styles/landing.scss'
+import '../styles/side-bar.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps } from 'next/app'
 

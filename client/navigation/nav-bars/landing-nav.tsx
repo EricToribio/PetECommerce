@@ -47,7 +47,7 @@ export default (props : {page : string}) => {
         }
         {
             props.page != "cleaning" &&
-            <a href="/cleaning" className=" nav-link" >Cleaning Supplies</a>
+            <a href="/cleaning-supplies" className=" nav-link" >Cleaning Supplies</a>
         }
          {
             props.page != "deals" &&
@@ -55,7 +55,7 @@ export default (props : {page : string}) => {
          }
          {
             props.page != "featured" &&
-            <a className=" nav-link " href='/feature' >Featured</a>
+            <a className=" nav-link " href='/featured' >Featured</a>
          }
         
           

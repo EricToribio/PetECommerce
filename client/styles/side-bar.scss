@@ -6,3 +6,12 @@
     height: 100vh;
     width: 200px;
 }
+.side-bar-item {
+    border: none;
+    background-color: transparent;
+    margin-top: 50px;
+    color : blue;
+}
+.side-bar-item :hover{
+    color:red;
+}

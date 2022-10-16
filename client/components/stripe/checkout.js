@@ -14,6 +14,9 @@ export async function checkout(lineItems){
 	const stripe = await getStripe()
 
 	await stripe.redirectToCheckout({
+		automatic_tax:{
+			enabled: true,
+		},
 		mode: 'payment',
 		lineItems,
 		successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,

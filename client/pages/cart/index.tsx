@@ -9,7 +9,7 @@ export default ()=>{
     {Name :"Cat Food",  price : 35.89, priceId : "price_1LsziaAH4EU9xHXdxEGYwuES",quantity : 1}
   ]
 
-  const handleBuy = (e :FormEvent<HTMLFormElement> ) => {
+  const handleBuy = ( ) => {
     let lineItems= [{}]
     for (let i = 0; i < cart.length; i++) {
       lineItems[i]= {

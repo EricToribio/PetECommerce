@@ -10,8 +10,13 @@
     border: none;
     background-color: transparent;
     margin-top: 50px;
-    color : blue;
 }
 .side-bar-item :hover{
     color:red;
+}
+.side-bar-active {
+    color:red;
+}
+.side-bar-inactive {
+    color: blue;
 }

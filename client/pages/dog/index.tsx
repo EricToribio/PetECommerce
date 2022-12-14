@@ -1,6 +1,7 @@
 
 import Cookies from "js-cookie"
 import { useEffect, useState } from "react"
+import DogNavBar from "../../navigation/dogs/dogNavBar"
 import LandingNav from "../../navigation/nav-bars/landing-nav"
 import  LandingSideBar  from "../../navigation/side-bars/landingSideBar"
 
@@ -19,6 +20,15 @@ export default () => {
         </div>
        
             <LandingSideBar page={'dog'} tab={tab} setTab={setTab}/>
+            {
+                tab === 'food' && 
+                <div className="lower-nav-wrapper">
+
+                    <DogNavBar/>
+                </div>
+
+            }
+
                 
         
            

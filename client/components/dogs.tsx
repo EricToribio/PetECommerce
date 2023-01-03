@@ -9,7 +9,7 @@ export default () => {
     let i = 0
     let g = 1
     
-const images= (item: imageType[], j : number = i) => {
+const images= (item: imageType[], j : number, g :number ) => {
 
         for (let i = j; i < item.length; i++) {
             if (j === 0) {
@@ -113,7 +113,7 @@ const images= (item: imageType[], j : number = i) => {
                                     i+=4    
                                 }
                                 return(
-                                    images(DogImageList) ,
+                                    images(DogImageList,i,g) ,
                                     )  
                                 } 
                         })

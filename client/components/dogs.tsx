@@ -1,119 +1,35 @@
 
-import { BaseNextRequest } from 'next/dist/server/base-http'
-import Image from 'next/image'
-import img from '../img/adult-dry-chk-rc-vg.jpg'
-import { DogImageList, imageType } from '../utils/dog-pic-utils'
+import NonSSRWrapper from '../utils/NoSSR'
+import { DogImageList, DogImageList2, images} from '../utils/dog-pic-utils'
+import DogFood from './dogFood'
+import DogFoodTest from './DogFoodTest'
 
 
 export default () => {
     let i = 0
+    let i2 = 0
+    let g2 = 1
     let g = 1
     
-const images= (item: imageType[], j : number, g :number ) => {
 
-        for (let i = j; i < item.length; i++) {
-            if (j === 0) {
-                return (
-                    <div className="media-group" id={`group-${g}`}>
-                        <div className="media-element dog-img">
-                            <Image src={item[0].Image} alt="" />
-                            <h6>
-                                {item[0].Description}
-                            </h6>
-                        </div>
-                        <div className="media-element dog-img">
-                            <Image src={item[1].Image} alt="" />
-                            <h6>
-                                {item[1].Description}
-                            </h6>
-                        </div>
-                        <div className="media-element dog-img">
-                            <Image src={item[2].Image} alt="" />
-                            <h6>
-                                {item[2].Description}
-                            </h6>
-                        </div>
-                        <div className="media-element dog-img">
-                            <Image src={item[3].Image} alt="" />
-                            <h6>
-                                {item[3].Description}
-                            </h6>
-                        </div>
-                        <div className="media-element dog-img">
-                            <Image src={item[4].Image} alt="" />
-                            <h6>
-                                {item[4].Description}
-                            </h6>
-                        </div>
-
-                        <a className="next" href="#group-2" aria-label="next">
-                            <svg>
-                                <use href="#next"></use>
-                            </svg>
-                        </a>
-                    </div>
-                )
-            } else {
-               
-                return (
-                    <div className="media-group" id={`group-${g}`}>
-                        <a className="previous" href={`#group-${g-1}`}>
-                            <svg>
-                                <use href="#previous"></use>
-                            </svg>
-                        </a>
-                        <div className="media-element dog-img">
-                            <Image src={item[j].Image} alt="" />
-                            <h6>
-                                {item[j].Description}
-                            </h6>
-                        </div> <div className="media-element dog-img">
-                            <Image src={item[j+1]?.Image} alt="" />
-                            <h6>
-                                {item[(j + 1)]?.Description}
-                            </h6>
-                        </div> <div className="media-element dog-img">
-                            <Image src={item[j + 2]?.Image} alt="" />
-                            <h6>
-                                {item[j + 2]?.Description}
-                            </h6>
-                        </div> <div className="media-element dog-img">
-                            <Image src={item[i + 3]?.Image} alt="" />
-                            <h6>
-                                {item[j + 3]?.Description}
-                            </h6>
-                        </div> <div className="media-element dog-img">
-                            <Image src={item[j + 4]?.Image} alt="" />
-                            <h6>
-                                {item[j + 4]?.Description}
-                            </h6>
-                        </div>
-                        <a className="next" href={`#group-${g+1}`} aria-label="next">
-                            <svg>
-                                <use href="#next"></use>
-                            </svg>
-                        </a>
-                    </div>
-                )
-            }
-
-        }
-}
     return (
+        <NonSSRWrapper>
         <div className="dog-container">
 
+                <DogFoodTest/>
+            <DogFood/>
             <div className="dog-body">
-                <h1>Food</h1>
+                <h1>Food 2</h1>
                 <div className="media-container">
                     <div className="media-scroller">
-                        { DogImageList.map((item, index) =>{ 
-                            if(i < DogImageList.length){
+                        { DogImageList2.map((item, index) =>{ 
+                            if(i < DogImageList2.length){
                                 if(index !== 0){
-                                    g+=1
-                                    i+=4    
+                                    g2+=1
+                                    i2+=4    
                                 }
                                 return(
-                                    images(DogImageList,i,g) ,
+                                    images(DogImageList2,i2,g2,'food2') ,
                                     )  
                                 } 
                         })
@@ -127,6 +43,7 @@ const images= (item: imageType[], j : number, g :number ) => {
                     </div>
                 </div>
             </div>
+            <DogFoodTest/>
             <svg>
                 <symbol id="next" viewBox="0 0 256 512">
                     <path fill="white"
@@ -139,5 +56,6 @@ const images= (item: imageType[], j : number, g :number ) => {
             </svg>
 
         </div>
+        </NonSSRWrapper>
     )
 }

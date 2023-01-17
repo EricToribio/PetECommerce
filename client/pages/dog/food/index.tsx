@@ -1,5 +1,5 @@
 import Cookies from "js-cookie"
-import router from "next/router"
+import  DogFoodTest from "../../../components/DogFoodTest"
 import { useEffect, useState } from "react"
 import LandingNav from "../../../navigation/nav-bars/landing-nav"
 import LandingSideBar from "../../../navigation/side-bars/landingSideBar"
@@ -20,6 +20,7 @@ export default () => {
         </div>
        
             <LandingSideBar page={'dog'} tab={tab} setTab={setTab}/>
+            <DogFoodTest/>
             
         </div>
     )

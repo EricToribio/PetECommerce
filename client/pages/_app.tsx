@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import '../styles/nav-bar.scss'
 import '../styles/landing.scss'
 import '../styles/side-bar.scss'

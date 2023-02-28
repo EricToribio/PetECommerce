@@ -14,37 +14,12 @@ export default () => {
     
 
     return (
-        <NonSSRWrapper>
-        <div className="dog-container">
+      <div className='dog-container'>
+        <div className="dog-body">
 
-                <DogFoodTest/>
+               <DogFood/>
             <DogFood/>
-            <div className="">
-                <h1>Food 2</h1>
-                {/* <div className="media-container"> */}
-                    <div className="wrapper">
-                        { DogImageList2.map((item, index) =>{ 
-                            if(i < DogImageList2.length){
-                                if(index !== 0){
-                                    g2+=1
-                                    i2+=4
-                                    sec+=1    
-                                }
-                                return(
-                                    netflixStyle(DogImageList2,i2,g2,'food2',sec)
-                                    )  
-                                } 
-                        })
-                        }
-                        
-                        {/* <!-- Pagination Indicators --> */}
-                        <div className="navigation-indicators">
-                            {/* <!-- 4 Groups --> */}
-                           
-                        </div>
-                    {/* </div> */}
-                </div>
-            </div>
+          
             
             {/* <svg>
                 <symbol id="next" viewBox="0 0 256 512">
@@ -58,6 +33,6 @@ export default () => {
             </svg> */}
 
         </div>
-        </NonSSRWrapper>
+        </div>
     )
 }

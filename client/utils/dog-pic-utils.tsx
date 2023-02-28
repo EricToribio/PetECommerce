@@ -426,3 +426,15 @@ export const netflixStyle = (item: imageType[], j : number, g :number, name : St
         }
 
 }
+
+//how to do netflix scroll?
+
+
+
+
+//Source: https://stackoverflow.com/questions/67499202
+
+
+
+
+

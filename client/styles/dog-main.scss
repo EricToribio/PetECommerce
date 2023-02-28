@@ -1,15 +1,18 @@
 .dog-body {
     padding-top: 100px;
-    
-}
-.dog-container {
-    margin-left: 200px;
-    border-width: 3px;
-    border-color: black;
-    border-style: solid;
+    margin-left: 220px;
+    margin-right: 100px;
     background-color: rgb(204, 204, 207);
-    padding: 15px;
-    min-height: 100%;
+    
+    
+  }
+  .slick-next {
+    right: 100px; 
+    height: 25px;
+   color: blue;
+  }
+  .dog-container {
+ 
     
 }
 .dog-img {
